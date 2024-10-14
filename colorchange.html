@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+
+    <style>
+        .buttons {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 5px;
+            border: 2px solid black;
+            cursor: pointer;
+            background-color: wheat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="buttons">
+        <div class="button" id="red">Red</div>
+        <div class="button" id="yellow">Yellow</div>
+        <div class="button" id="grey">Grey</div>
+        <div class="button" id="black">Black</div>
+        <div class="button" id="white">White</div>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll(".button")
+        buttons.forEach((val) => {
+            val.addEventListener('click', (event) => {
+                const color = event.target.id;
+                switch (color) {
+                    case 'red':
+                        document.body.style.backgroundColor = event.target.id;
+                        break;
+                    case 'white':
+                        document.body.style.backgroundColor = event.target.id;
+                        break;
+                    case 'grey':
+                        document.body.style.backgroundColor = event.target.id;
+                        break;
+                    case 'yellow':
+                        document.body.style.backgroundColor = event.target.id;
+                        break;
+                    case 'black':
+                        document.body.style.backgroundColor = event.target.id;
+                        break;
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
